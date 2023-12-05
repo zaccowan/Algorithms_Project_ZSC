@@ -20,7 +20,7 @@ public class SelectionSort {
         int n;
         n = array.length;
 
-        for (int i = 0; i < n-2; i++) {
+        for (int i = 0; i < n-1; i++) {
             // Assume the min element is at i
             int minIndex = i;
 
@@ -32,7 +32,7 @@ public class SelectionSort {
             }
 
             // Swap i with the minimum found
-            int temp = array[minIndex];
+            int temp = array[i];
             array[i] = array[minIndex];
             array[minIndex] = temp;
         }

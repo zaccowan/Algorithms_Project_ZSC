@@ -27,7 +27,7 @@ public class uniqueList {
     public uniqueList(int n) {
         //Instantiates uniqueArray with n element.
         uniqueArray = new int[n];
-        final int RAND_RANGE = Integer.MAX_VALUE;
+        int RAND_RANGE = Integer.MAX_VALUE;
 
         //Since the first number element must be unique
         int randNum = rand.nextInt(RAND_RANGE); // generate a random number 1 to Max Integer Size
@@ -47,7 +47,6 @@ public class uniqueList {
 
             // Determine if randNum exists in the filled indices of uniqueArray
             for( int i = 0 ; i < numAppendedToArray ; i++) {
-
                 // randNum is present in the unique array, so we do not want to add it again
                 if( randNum == uniqueArray[i] ) {
                     isInArray = true;

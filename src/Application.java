@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 /**
  * Class used to test code written in the uniqueList package.
@@ -12,7 +12,6 @@ public class Application {
      * Default constructor to satisfy javadocs.
      */
     public Application() {
-
     }
 
     /**
@@ -24,7 +23,7 @@ public class Application {
         //
         // Creates random unique list using implemented algorithm
         long startCreate = System.nanoTime();
-        uniqueList creator = new uniqueList(300);
+        uniqueList creator = new uniqueList(1000);
         long endCreate = System.nanoTime();
         System.out.println("Random Unique List");
         creator.printArray();
@@ -35,7 +34,7 @@ public class Application {
         //
         // Sorts random unique list using selection sort algorithm
         SelectionSort selection = new SelectionSort();
-        int[] arrForSelection = creator.getArray();
+        int[] arrForSelection = Arrays.copyOf(creator.getArray(), creator.getArray().length);
         System.out.println("Selection Sorted:");
 
         long startSelSort = System.nanoTime();
@@ -50,7 +49,7 @@ public class Application {
         //
         // Sort random unique list using merge sort algorithm
         MergeSort merge = new MergeSort();
-        int[] arrForMerge = creator.getArray();
+        int[] arrForMerge = Arrays.copyOf(creator.getArray(), creator.getArray().length);
 
         System.out.println("Merge Sorted:");
         long startMerSort = System.nanoTime();
