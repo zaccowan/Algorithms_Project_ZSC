@@ -8,6 +8,12 @@
  */
 public class Application {
 
+    /**
+     * Default constructor to satisfy javadocs.
+     */
+    public Application() {
+
+    }
 
     /**
      * Run point for java.

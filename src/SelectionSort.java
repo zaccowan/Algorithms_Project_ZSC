@@ -1,11 +1,24 @@
+/**
+ * Selection sort class with sort and print method.
+ * @author Zachary Cowan
+ * @version 9/27/2023
+ * Fall/2023
+ */
 public class SelectionSort {
 
+    /**
+     * Default Constructor
+     */
     public SelectionSort() {
     }
 
-    public void sort(int[] unsortedArr) {
+    /**
+     * Sorts array using selection sort algorithm.
+     * @param array Array to sort.
+     */
+    public void sort(int[] array) {
         int n;
-        n = unsortedArr.length;
+        n = array.length;
 
         for (int i = 0; i < n-2; i++) {
             // Assume the min element is at i
@@ -13,22 +26,25 @@ public class SelectionSort {
 
             // Compare all elements after i to determine the minimum
             for (int j = i + 1; j < n; j++) {
-                if (unsortedArr[j] < unsortedArr[minIndex]) {
+                if (array[j] < array[minIndex]) {
                     minIndex = j;
                 }
             }
 
             // Swap i with the minimum found
-            int temp = unsortedArr[minIndex];
-            unsortedArr[i] = unsortedArr[minIndex];
-            unsortedArr[minIndex] = temp;
+            int temp = array[minIndex];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
         }
 
     }
-
-    public void printArray(int[] arr) {
-        int n = arr.length;
-        for (int j : arr) System.out.print(j + " ");
+    /**
+     * Method to print all elements in array.
+     * @param array Array to print
+     */
+    public void printArray(int[] array) {
+        int n = array.length;
+        for (int j : array) System.out.print(j + " ");
         System.out.println();
     }
 }
