@@ -18,10 +18,10 @@ public class Application {
         //
         // Creates random unique list using implemented algorithm
         long startCreate = System.nanoTime();
-        uniqueList creator = new uniqueList(2000);
+        uniqueList creator = new uniqueList(300);
         long endCreate = System.nanoTime();
         System.out.println("Random Unique List");
-//        creator.printArray();
+        creator.printArray();
         System.out.println("Computation Time: " + (endCreate - startCreate) / 1000000.0 + "ms");
 
         System.out.println();
@@ -36,7 +36,7 @@ public class Application {
         selection.sort(arrForSelection);
         long endSelSort = System.nanoTime();
 
-//        selection.printArray(arrForSelection);
+        selection.printArray(arrForSelection);
         System.out.println("Selection Sort Time: " + (endSelSort - startSelSort) / 1000000.0 + "ms");
 
         System.out.println();
@@ -48,10 +48,10 @@ public class Application {
 
         System.out.println("Merge Sorted:");
         long startMerSort = System.nanoTime();
-        merge.sort(arrForMerge, 0, arrForMerge.length -1 );
+        merge.sort(arrForMerge);
         long endMerSort = System.nanoTime();
 
-//        merge.printArray(arrForMerge);
+        merge.printArray(arrForMerge);
         System.out.println("Merge Sort Time: " + (endMerSort - startMerSort) / 1000000.0 + "ms");
     }
 }
